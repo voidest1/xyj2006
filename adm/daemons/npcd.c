@@ -1,7 +1,7 @@
 // named.c
 
 //#pragma optimize
-//#pragma save_binary
+//
 
 #include <npc/name.h>
 #include <npc/chinese.c>

@@ -1,6 +1,6 @@
 #include <ansi.h>
 #include <command.h>
-#pragma save_binary
+
 
 string *quests;
 string *roomlines;

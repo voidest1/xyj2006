@@ -1,7 +1,7 @@
 // move.c
 #include <tomud.h>
 #pragma optimize
-#pragma save_binary
+
 
 #include <ansi.h>
 #include <dbase.h>
