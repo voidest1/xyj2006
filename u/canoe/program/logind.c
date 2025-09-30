@@ -821,8 +821,8 @@ varargs void enter_world(object ob, object user, int silent)
 			user->move("/d/wiz/guest");
 			log_file( "ALLCONT", sprintf("from banned site\n"));
 		}
-		else if( !catch(load_object(startroom)) )
-			user->move(startroom);
+		/*else if( !catch(load_object(startroom)) )
+			user->move(startroom);*/
 		else {
 			user->move(START_ROOM);
 			startroom = START_ROOM;
