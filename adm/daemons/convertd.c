@@ -314,6 +314,8 @@ string BIG2GB (string str)
 
 string input (string str, object me)
 {
+    int n, c;
+
     if (! str || ! me)
         return str;
 /* 去掉末尾的 \r / \n （兼容 \r\n / \n\r 连续情况） */
