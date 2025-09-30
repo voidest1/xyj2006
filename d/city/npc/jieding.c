@@ -77,4 +77,3 @@ int give_book ()
   book->move(who);
   return 1; 
 }
-�

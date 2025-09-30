@@ -6,18 +6,18 @@ int fly_sea();
 
 void create()
 {
-	set_name("Ìú¹ÕÀî", ({"tieguai li", "tieguai", "li"}));
+	set_name("é“æ‹æŽ", ({"tieguai li", "tieguai", "li"}));
 	//set("title", "");
-	set("gender", "ÄÐÐÔ" );
+	set("gender", "ç”·æ€§" );
 	set("age", 42);
 	set("per", 12);
-	set("long", "Ëû½ÅµÇÒ»Ë«ÀÃ²ÝÐ¬£¬Éí×ÅÒ»¼þÔç¾ÍÃ»ÁË±¾À´ÃæÄ¿µÄÔàÅÛ£¬×ìÀïºß×Å×ßµ÷Ð¡Çú£¬Ò»¸±ÓÆÏÐÉñÌ¬¡£\n");
+	set("long", "ä»–è„šç™»ä¸€åŒçƒ‚è‰éž‹ï¼Œèº«ç€ä¸€ä»¶æ—©å°±æ²¡äº†æœ¬æ¥é¢ç›®çš„è„è¢ï¼Œå˜´é‡Œå“¼ç€èµ°è°ƒå°æ›²ï¼Œä¸€å‰¯æ‚ é—²ç¥žæ€ã€‚\n");
 	set("class", "xian");
 	set("combat_exp", 120000);
   set("daoxing", 300000);
 
 	set("attitude", "peaceful");
-	create_family("Îå×¯¹Û", 3, "µÜ×Ó");
+	create_family("äº”åº„è§‚", 3, "å¼Ÿå­");
 	set_skill("unarmed", 60);
 	set_skill("wuxing-quan", 60);
 	set_skill("dodge", 80);
@@ -46,7 +46,7 @@ void create()
 	set("mana_factor", 40);
 
 	set("inquiry",([
-    "ÖØÓÎ¶«º£": (: fly_sea :),
+    "é‡æ¸¸ä¸œæµ·": (: fly_sea :),
 		]));
 
 	setup();
@@ -58,24 +58,24 @@ void create()
 int fly_sea()
 {
   string *jnames = ({
-    "ÈÈ¾Æ",
-    "Çå°×ÀÏ¾Æ",
-    "Ë®¾Æ",
-    "ËÖºÏÏãÓÍ",
-    "µ­²è",
-    "½­Ã×¾Æ",
-    "ÀÏ°×¸É",
-	"Ã×¾Æ",
-	"ÑòÄÌ¾Æ",
-	"ÅÝµÄÒÑ¾­Ã»ÓÐÎ¶µÄ²èË®",
-	"ÇåË®",
-	"°×ÉÕ¾Æ",
-	"Î÷ºþÁú¾®²è",
-	"Çå²è",
-	"¹ð»¨¾Æ",
-	"ÔÆÎíÉ½Ïã²è",
-	"±ÌéØ²è",
-	"Ðþ»ð¾Æ",
+    "çƒ­é…’",
+    "æ¸…ç™½è€é…’",
+    "æ°´é…’",
+    "é…¥åˆé¦™æ²¹",
+    "æ·¡èŒ¶",
+    "æ±Ÿç±³é…’",
+    "è€ç™½å¹²",
+	"ç±³é…’",
+	"ç¾Šå¥¶é…’",
+	"æ³¡çš„å·²ç»æ²¡æœ‰å‘³çš„èŒ¶æ°´",
+	"æ¸…æ°´",
+	"ç™½çƒ§é…’",
+	"è¥¿æ¹–é¾™äº•èŒ¶",
+	"æ¸…èŒ¶",
+	"æ¡‚èŠ±é…’",
+	"äº‘é›¾å±±é¦™èŒ¶",
+	"ç¢§æ¨¨èŒ¶",
+	"çŽ„ç«é…’",
   });  
    	string jname;
 	object me,ob;
@@ -86,17 +86,17 @@ int fly_sea()
 		  return 0;
       if (me->query("wzggive/tieguaili"))
     	{
-	 		  message_vision(HIG"\nÌú¹ÕÀîÎÊµÀ£ºÎÒÒªµÄ"+CYN""+me->query("wzggive/tieguaili")+HIG"¿ÉÔøÄÃµ½ÁËÂð£¿£¡\n"NOR,me);
+	 		  message_vision(HIG"\né“æ‹æŽé—®é“ï¼šæˆ‘è¦çš„"+CYN""+me->query("wzggive/tieguaili")+HIG"å¯æ›¾æ‹¿åˆ°äº†å—ï¼Ÿï¼\n"NOR,me);
 			  return 1;
 		}
 	  if( me->query_temp("wzg/tieguaili")!="give")
 	    {
 	      jname = jnames[random(sizeof(jnames))];
-		  message_vision(HIG"\nÌú¹ÕÀîÑÛ¾¦Ò»ÁÁ¶Ô$NËµµÀ£ººÃ£¬ºÃ£¬ºÃ£¬ÒªÊÇÔÙ´øÉÏµã"+CYN""+jname+HIG"¾Í¸üºÃÁË£¡\n"NOR,me);
+		  message_vision(HIG"\né“æ‹æŽçœ¼ç›ä¸€äº®å¯¹$Nè¯´é“ï¼šå¥½ï¼Œå¥½ï¼Œå¥½ï¼Œè¦æ˜¯å†å¸¦ä¸Šç‚¹"+CYN""+jname+HIG"å°±æ›´å¥½äº†ï¼\n"NOR,me);
 		  me->set("wzggive/tieguaili",jname);
 		  return 1;
 		}
-	command("say " + RANK_D->query_respect(me) + "¿ìÈ¥½ÐÉÏÆäËû°ËÏÉ£¬ÎÒÏÈ×ßÒ»²½ÁË£¡\n");
+	command("say " + RANK_D->query_respect(me) + "å¿«åŽ»å«ä¸Šå…¶ä»–å…«ä»™ï¼Œæˆ‘å…ˆèµ°ä¸€æ­¥äº†ï¼\n");
 	ob->move("/d/changan/eastseashore");
     return 1;
 }
@@ -115,7 +115,7 @@ int accept_object(object who, object ob)
   }
   
 
-  message_vision(HIG"\n$NÐ¦ÃÐÃÐµÄÅõ×Å$n×ÔÑÔ×ÔÓïµÀ£ºÐ¡$nÑ½£¬½ñÌìÎÒ¾Í´øÄãÈ¥¶«º£ÍæÍæ£®\n"NOR,me,ob);
+  message_vision(HIG"\n$Nç¬‘çœ¯çœ¯çš„æ§ç€$nè‡ªè¨€è‡ªè¯­é“ï¼šå°$nå‘€ï¼Œä»Šå¤©æˆ‘å°±å¸¦ä½ åŽ»ä¸œæµ·çŽ©çŽ©ï¼Ž\n"NOR,me,ob);
   who->set_temp("wzg/tieguaili","give");
   who->delete("wzggive/tieguaili");
   return 1;
@@ -131,29 +131,29 @@ void return_ob (object who, object ob)
 
 void attempt_apprentice(object ob)
 {
-	if( (string)ob->query("family/family_name")=="Îå×¯¹Û" )
+	if( (string)ob->query("family/family_name")=="äº”åº„è§‚" )
 	{
 		if( (int)ob->query("family/generation") < 3  )
 		{
-			if ( (string)ob->query("gender") == "ÄÐÐÔ" ) command("say Ê¦Êå¼ûÐ¦ÁË¡£\n");
-			else command("say Ê¦¹Ã¼ûÐ¦ÁË¡£\n");
+			if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå”è§ç¬‘äº†ã€‚\n");
+			else command("say å¸ˆå§‘è§ç¬‘äº†ã€‚\n");
 		}
 		else if( (int)ob->query("family/generation") ==3  )
 		{
 			command("kick " + ob->query("id") );
-			command("say ÄãÕâ¸ö" + RANK_D->query_rude(ob) + "£¬¸ÒÀ´ÏûÇ²ÀÏ×Ó£¡\n");
+			command("say ä½ è¿™ä¸ª" + RANK_D->query_rude(ob) + "ï¼Œæ•¢æ¥æ¶ˆé£è€å­ï¼\n");
 		}
 		else 
 		{
 			command("consider");
-			command("say ÊÇÄã×Ô¼ºÒª°ÝµÄ£¬ÄãÊ¦¸¸´òÉÏÃÅÀ´ÎÒ¿ÉµÃÄÃÄãµ²¡£\n");
+			command("say æ˜¯ä½ è‡ªå·±è¦æ‹œçš„ï¼Œä½ å¸ˆçˆ¶æ‰“ä¸Šé—¨æ¥æˆ‘å¯å¾—æ‹¿ä½ æŒ¡ã€‚\n");
 			command("recruit " + ob->query("id") );
 		}
 	}
 
 	else
 	{
-		command("say ºÃ£¬ÎÒÎå×¯¹ÛÒ»ÃÅÈË²Å±²³ö£¬Äã¿ÉµÃ¸øÊ¦¸¸ÕùÆø¡£\n");
+		command("say å¥½ï¼Œæˆ‘äº”åº„è§‚ä¸€é—¨äººæ‰è¾ˆå‡ºï¼Œä½ å¯å¾—ç»™å¸ˆçˆ¶äº‰æ°”ã€‚\n");
 		command("recruit " + ob->query("id") );
 	}
 
@@ -165,8 +165,3 @@ int recruit_apprentice(object ob)
 	if( ::recruit_apprentice(ob) )
 		ob->set("class", "xian");
 }
-
-
-
-
-ÿ

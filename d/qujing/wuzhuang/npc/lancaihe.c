@@ -4,18 +4,18 @@ int fly_sea();
 inherit NPC;
 void create()
 {
-	set_name("À¶²ÉºÍ", ({"lan caihe", "lan", "caihe"}));
+	set_name("è“é‡‡å’Œ", ({"lan caihe", "lan", "caihe"}));
 	//set("title", "");
-	set("gender", "ÄÐÐÔ" );
+	set("gender", "ç”·æ€§" );
 	set("age", 18);
 	set("per", 20);
-	set("long", "Ò»Î»ÃæÌóºÍÉÆµÄÉÙÄê¡£\n");
+	set("long", "ä¸€ä½é¢è…†å’Œå–„çš„å°‘å¹´ã€‚\n");
 	set("class", "xian");
 	set("combat_exp", 120000);
   set("daoxing", 200000);
 
 	set("attitude", "peaceful");
-	create_family("Îå×¯¹Û", 3, "µÜ×Ó");
+	create_family("äº”åº„è§‚", 3, "å¼Ÿå­");
 	set_skill("unarmed", 60);
 	set_skill("wuxing-quan", 60);
 	set_skill("dodge", 80);
@@ -43,7 +43,7 @@ void create()
 	set("force_factor", 40);
 	set("mana_factor", 40);
 	set("inquiry",([
-    "ÖØÓÎ¶«º£": (: fly_sea :),
+    "é‡æ¸¸ä¸œæµ·": (: fly_sea :),
 		]));
 	setup();
 	carry_object("/d/obj/cloth/linen")->wear();
@@ -53,24 +53,24 @@ void create()
 int fly_sea()
 {
   string *jnames = ({
-    "ÈÈ¾Æ",
-    "Çå°×ÀÏ¾Æ",
-    "Çå²è",
-	"Ë®¾Æ",
-    "ËÖºÏÏãÓÍ",
-    "µ­²è",
-    "½­Ã×¾Æ",
-    "ÀÏ°×¸É",
-	"Î÷ºþÁú¾®²è",
-	"Ã×¾Æ",
-	"ÑòÄÌ¾Æ",
-	"ÅÝµÄÒÑ¾­Ã»ÓÐÎ¶µÄ²èË®",
-	"ÇåË®",
-	"°×ÉÕ¾Æ",
-	"¹ð»¨¾Æ",
-	"ÔÆÎíÉ½Ïã²è",
-	"±ÌéØ²è",
-	"Ðþ»ð¾Æ",
+    "çƒ­é…’",
+    "æ¸…ç™½è€é…’",
+    "æ¸…èŒ¶",
+	"æ°´é…’",
+    "é…¥åˆé¦™æ²¹",
+    "æ·¡èŒ¶",
+    "æ±Ÿç±³é…’",
+    "è€ç™½å¹²",
+	"è¥¿æ¹–é¾™äº•èŒ¶",
+	"ç±³é…’",
+	"ç¾Šå¥¶é…’",
+	"æ³¡çš„å·²ç»æ²¡æœ‰å‘³çš„èŒ¶æ°´",
+	"æ¸…æ°´",
+	"ç™½çƒ§é…’",
+	"æ¡‚èŠ±é…’",
+	"äº‘é›¾å±±é¦™èŒ¶",
+	"ç¢§æ¨¨èŒ¶",
+	"çŽ„ç«é…’",
   });  
    	string jname;
 	object me,ob;
@@ -81,17 +81,17 @@ int fly_sea()
 		  return 0;
       if (me->query("wzggive/lancaihe"))
     	{
-	 		  message_vision(HIB"\nÀ¶²ÉºÍÎÊµÀ£ºÎÒÒªµÄ"+CYN""+me->query("wzggive/lancaihe")+HIB"¿ÉÔøÄÃµ½ÁËÂð£¿£¡\n"NOR,me);
+	 		  message_vision(HIB"\nè“é‡‡å’Œé—®é“ï¼šæˆ‘è¦çš„"+CYN""+me->query("wzggive/lancaihe")+HIB"å¯æ›¾æ‹¿åˆ°äº†å—ï¼Ÿï¼\n"NOR,me);
 			  return 1;
 		}
 	  if( me->query_temp("wzg/lancaihe")!="give")
 	    {
 	      jname = jnames[random(sizeof(jnames))];
-		  message_vision(HIB"\nÀ¶²ÉºÍÏëÁËÏë¶Ô$NËµµÀ£ºÒªÊÇÓÐ"+CYN""+jname+HIB"ÎÒ¾ÍÈ¥£¡\n"NOR,me);
+		  message_vision(HIB"\nè“é‡‡å’Œæƒ³äº†æƒ³å¯¹$Nè¯´é“ï¼šè¦æ˜¯æœ‰"+CYN""+jname+HIB"æˆ‘å°±åŽ»ï¼\n"NOR,me);
 		  me->set("wzggive/lancaihe",jname);
 		  return 1;
 		}
-	command("say " + RANK_D->query_respect(me) + "¿ìÈ¥½ÐÉÏÆäËû°ËÏÉ£¬ÎÒÏÈ×ßÒ»²½ÁË£¡\n");
+	command("say " + RANK_D->query_respect(me) + "å¿«åŽ»å«ä¸Šå…¶ä»–å…«ä»™ï¼Œæˆ‘å…ˆèµ°ä¸€æ­¥äº†ï¼\n");
 	ob->move("/d/changan/eastseashore");
     return 1;
 }
@@ -110,7 +110,7 @@ int accept_object(object who, object ob)
   }
   
 
-  message_vision(HIB"\n$NÄÃ×Å$nÀÖ²»ÊÍÊÖ£¬à«à«µÀ£ºÒ»Â·³©ÓÎ¶«º£»¹ÓÐ$nÅã°éÒ»¶¨±ÈÃÆÔÚÕâÀïÇ¿£®\n"NOR,me,ob);
+  message_vision(HIB"\n$Næ‹¿ç€$nä¹ä¸é‡Šæ‰‹ï¼Œå–ƒå–ƒé“ï¼šä¸€è·¯ç•…æ¸¸ä¸œæµ·è¿˜æœ‰$né™ªä¼´ä¸€å®šæ¯”é—·åœ¨è¿™é‡Œå¼ºï¼Ž\n"NOR,me,ob);
   who->set_temp("wzg/lancaihe","give");
   who->delete("wzggive/lancaihe");
   return 1;
@@ -126,29 +126,29 @@ void return_ob (object who, object ob)
 
 void attempt_apprentice(object ob)
 {
-	if( (string)ob->query("family/family_name")=="Îå×¯¹Û" )
+	if( (string)ob->query("family/family_name")=="äº”åº„è§‚" )
 	{
 		if( (int)ob->query("family/generation") < 3  )
 		{
-			if ( (string)ob->query("gender") == "ÄÐÐÔ" ) command("say Ê¦Êå¼ûÐ¦ÁË¡£\n");
-			else command("say Ê¦¹Ã¼ûÐ¦ÁË¡£\n");
+			if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå”è§ç¬‘äº†ã€‚\n");
+			else command("say å¸ˆå§‘è§ç¬‘äº†ã€‚\n");
 		}
 		else if( (int)ob->query("family/generation") ==3  )
 		{
-			if ( (string)ob->query("gender") == "ÄÐÐÔ" ) command("say Ê¦ÐÖÌ«¿ÍÆøÁË¡£\n");
-			else command("say Ê¦ÃÃÌ«¿ÍÆøÁË¡£\n");
+			if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå…„å¤ªå®¢æ°”äº†ã€‚\n");
+			else command("say å¸ˆå¦¹å¤ªå®¢æ°”äº†ã€‚\n");
 		}
 		else 
 		{
 			command("consider");
-			command("say ÊÇÄã×Ô¼ºÒª°ÝµÄ£¬ÄãÊ¦¸¸´òÉÏÃÅÀ´ÎÒ¿ÉµÃÄÃÄãµ²¡£\n");
+			command("say æ˜¯ä½ è‡ªå·±è¦æ‹œçš„ï¼Œä½ å¸ˆçˆ¶æ‰“ä¸Šé—¨æ¥æˆ‘å¯å¾—æ‹¿ä½ æŒ¡ã€‚\n");
 			command("recruit " + ob->query("id") );
 		}
 	}
 
 	else
 	{
-		command("say ºÃ£¬ÄÇÎÒ¾ÍÃãÎªÆäÄÑ°É¡£\n");
+		command("say å¥½ï¼Œé‚£æˆ‘å°±å‹‰ä¸ºå…¶éš¾å§ã€‚\n");
 		command("recruit " + ob->query("id") );
 	}
 
@@ -160,8 +160,3 @@ int recruit_apprentice(object ob)
 	if( ::recruit_apprentice(ob) )
 		ob->set("class", "xian");
 }
-
-
-
-
-ÿ
