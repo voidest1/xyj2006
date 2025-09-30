@@ -311,13 +311,6 @@ string BIG2GB (string str)
 
     return sc_convert_fp(str, mode, mapping1); 
 }
-string dump_hex(string s) {
-    int i, n; string *a;
-    if (!stringp(s)) return "<null>";
-    n = strlen(s); a = allocate(n);
-    for (i = 0; i < n; i++) a[i] = sprintf("%02X", s[i] & 0xFF);
-    return implode(a, " ");
-}
 
 string input (string str, object me)
 {
