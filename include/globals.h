@@ -5,6 +5,7 @@
 // (See config file of driver)
 #include "tomud.h"
 #pragma save_binary
+#pragma no_warnings
 //added by Beeby @ DTXY for TOPTEN
 #define TOPTEN_RICH     "/data/topten/rich.o"
 #define TOPTEN_PKER     "/data/topten/pker.o"
