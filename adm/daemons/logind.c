@@ -281,14 +281,14 @@ private void if_young(string arg, object ob)
 }
 private void get_id(string arg, object ob)
 {
-    if( arg!="2060" ) 
+/*    if( arg!="2060" )
     {
                 write(HIW"你的客户端非Tomud或者非笑傲江湖WWW客户端!!\n本端口只能使用Tomud或者笑傲江湖客户端连接.\n请到"+YEL"http://akailee.myrice.com/"NOR+RED"上下载Tomud或者专用笑傲江湖客户端!\n
                        \n"HIW"服务器已经和你断开连接了\n"NOR);
             cat("/adm/etc/new.txt");
           destruct(ob);
             return;
-   }
+   }*/
     input_to("get_id1", ob);	
 }
 private void get_id1(string arg, object ob)
