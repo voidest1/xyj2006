@@ -277,7 +277,7 @@ private void if_young(string arg, object ob)
 	cat(XYJ_SITES);
 	write(TMI("version "));
 	write("\n您的英文名字：（新玩家请键入 new 注册）");
-	input_to( (: get_id :), ob);
+	input_to( (: get_id1 :), ob);
 }
 private void get_id(string arg, object ob)
 {

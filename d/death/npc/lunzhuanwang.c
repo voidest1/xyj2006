@@ -5,9 +5,9 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("ÂÖ×ªÍõ", ({"lunzhuan wang", "wang"}));
-       set("title", "Òõ¼äÊ®ÍõÖ®");
-       set("gender", "ÄÐÐÔ");
+       set_name("è½®è½¬çŽ‹", ({"lunzhuan wang", "wang"}));
+       set("title", "é˜´é—´åçŽ‹ä¹‹");
+       set("gender", "ç”·æ€§");
        set("age", 70);
 	set("class", "youling");
        set("attitude", "peaceful");
@@ -35,7 +35,7 @@ void create()
 	set_skill("tonsillit", 100);
 	map_skill("spells", "gouhunshu");
 	map_skill("force", "tonsillit");
-	create_family("ÑÖÂÞµØ¸®", 1, "ÄãºÃ");
+	create_family("é˜Žç½—åœ°åºœ", 1, "ä½ å¥½");
 setup();
 
         carry_object("/d/obj/cloth/mangpao")->wear();
@@ -43,4 +43,4 @@ setup();
 //        carry_object("/d/lingtai/obj/putibang")->wield();
 }
 
-ÿ
+ï¿½
