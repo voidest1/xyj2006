@@ -1,4 +1,3 @@
-#pragma save_binary
 #include "tomud.h"
 #define TOPTEN_RICH     "/data/topten/rich.o"
 #define TOPTEN_PKER     "/data/topten/pker.o"
