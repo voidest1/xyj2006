@@ -1065,7 +1065,7 @@ int check_legal_name(string name)
 	int i;
 
 	i = strlen(name);
-	
+
 	if( (strlen(name) < 2) || (strlen(name) > 12 ) ) {
 		write("对不起，你的中文名字必须是一到六个中文字。\n");
 		return 0;

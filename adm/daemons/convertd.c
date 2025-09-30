@@ -316,10 +316,14 @@ string input (string str, object me)
 {
     if (! str || ! me)
         return str;
-    if (me->query_encoding() == 1)
-    {
-        return BIG2GB(str);
+/* 去掉末尾的 \r / \n （兼容 \r\n / \n\r 连续情况） */
+    n = strlen(str);
+    while (n > 0) {
+        c = str[n - 1] & 0xFF;
+        if (c == '\n' || c == '\r') n--;
+        else break;
     }
+    if (n != strlen(str)) str = str[0..n-1];
     return str;
 }
 
