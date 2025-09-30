@@ -127,7 +127,7 @@ private void encoding(string arg, object ob)
         mixed info;
 	int encode;
 	
-
+/*
 	if(!arg || arg=="") {
 	    write("\nSelect 国标码 GB or き絏 BIG5 (gb/big5):");
 	    input_to( (: encoding :), ob );
@@ -141,8 +141,8 @@ private void encoding(string arg, object ob)
 	    input_to( (: encoding :), ob );
 	    return;
 	}
-	
-	ob->set_encoding(encode);
+	*/
+	ob->set_encoding(0);
 
 	ip_name = query_ip_name(ob);
 	ip_number = query_ip_number(ob);
