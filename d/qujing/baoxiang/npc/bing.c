@@ -4,8 +4,8 @@ inherit NPC;
 
 void create()
 {
-        set_name("¹¬±ø", ({ "gong bing", "bing" }) );
-        set("gender", "ÄÐÐÔ");
+        set_name("å®«å…µ", ({ "gong bing", "bing" }) );
+        set("gender", "ç”·æ€§");
         set("age", 35);
         set("combat_exp", 200000+random(20000));
   set("daoxing", 50000);
@@ -110,4 +110,4 @@ void remove_no_return(object me)
   me->set_temp("no_return",0);
 }
 
-ÿ
+ï¿½
