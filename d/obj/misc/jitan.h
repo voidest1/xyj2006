@@ -1,7 +1,7 @@
 	
 #include <ansi.h>
 #include </d/city/misc/banned.h>
-#define SHILI_D "/adm/daemons/shili"
+/*#define SHILI_D "/adm/daemons/shili"*/
 void invite_one(object me,string pos);
 
 	string get_pos()
