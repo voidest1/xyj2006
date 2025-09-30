@@ -9,7 +9,7 @@ string to_chinese(string str)
 	return CHINESE_D->chinese(str);
 }
 
-int is_chinese(string str)
+int is_chinese(string s)
 {
 int n = strlen(s);
     if (!stringp(s) || n == 0) return 0;
