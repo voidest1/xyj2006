@@ -1,5 +1,5 @@
 #pragma save_binary
-#pragma no_warnings
+// #pragma no_warnings
 //
 // file: globals.h
 //
