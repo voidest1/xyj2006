@@ -113,14 +113,8 @@ void logon(object ob)
         }
 // by canoe 防止恶意reconnet造成系统崩溃
 
-#ifdef GB_AND_BIG5x
-    write("            西游记2006欢迎您来访！使用国标码的玩家请键入：gb\n");
-    write("         Welcome to "BLINK HIY"DTXYJ!"NOR" Select GB or BIG5 (gb/big5):");
-    input_to( (: encoding :), ob );
-#else
     //write(TMI("lbadd0 玩家A(playera)01173;")+TMI("lbadd0 玩家B(playerb)昵称01174;")+TMI("lbadd0 物品A(objectA)00961;"));
     encoding("gb",ob);
-#endif
 
 }
 
